@@ -1,6 +1,6 @@
-package com.assessment.productcatalog.repository;
+package com.assessment.product_catalog.repository;
 
-import com.assessment.productcatalog.model.Product;
+import com.assessment.product_catalog.model.Product;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.EntityGraph;

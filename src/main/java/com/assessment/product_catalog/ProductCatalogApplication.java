@@ -1,4 +1,4 @@
-package com.assessment.productcatalog;
+package com.assessment.product_catalog;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

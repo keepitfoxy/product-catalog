@@ -1,4 +1,4 @@
-package com.assessment.productcatalog.dto;
+package com.assessment.product_catalog.dto;
 
 import lombok.Builder;
 import lombok.Data;

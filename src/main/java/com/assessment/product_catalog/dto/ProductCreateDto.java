@@ -1,4 +1,4 @@
-package com.assessment.productcatalog.dto;
+package com.assessment.product_catalog.dto;
 
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotBlank;
