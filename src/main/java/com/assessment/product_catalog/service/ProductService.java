@@ -13,6 +13,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.math.BigDecimal;
+
 @Service
 @RequiredArgsConstructor
 public class ProductService {
@@ -21,8 +23,8 @@ public class ProductService {
     private final ProducerRepository producerRepository;
 
     @Transactional(readOnly = true)
-    public Page<ProductDto> getAllProducts(Pageable pageable) {
-        return productRepository.findAll(pageable)
+    public Page<ProductDto> getAllProducts(String name, BigDecimal minPrice, BigDecimal maxPrice, Pageable pageable) {
+        return productRepository.findByFilters(name, minPrice, maxPrice, pageable)
                 .map(this::mapToDto);
     }
 

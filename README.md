@@ -100,14 +100,20 @@ curl -i -X POST http://localhost:8080/api/v1/products \
 }'
 ```
 
-### 2. Retrieve all products (GET)
+### 2. Retrieve & Filter products (GET)
 
-Returns a paginated list of products, including their nested producer objects.
+Returns a paginated list of products. Includes filtering by name and price range.
 
 ```bash
-curl -s -X GET "http://localhost:8080/api/v1/products?page=0&size=20" | json_pp
+curl -i -X GET "http://localhost:8080/api/v1/products?minPrice=100&maxPrice=500&name=Cloud"
 ```
 
-(Note: json_pp is used for pretty-printing the output in terminal)
+### 3. Retrieve all producers (GET)
+
+Fetches the list of available producers in the system.
+
+```bash
+curl -i -X GET http://localhost:8080/api/v1/producers
+```
 
 
